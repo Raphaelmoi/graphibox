@@ -1,0 +1,20 @@
+<article class="col-lg-4 col-md-4 col-sm-4 col-xs-6 news" (click)="onViewArticle(id)">
+    <img src="{{ webService.imageUrl(id, image) }}" alt="" />
+
+    <h4>{{ title | slice: 0:40 }}...</h4>
+    <legend>{{ legend }}</legend>
+    <div class="socialMediaBlock">
+        <a href="">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a href="">
+            <i class="fab fa-google-plus"></i>
+        </a>
+        <a href="">
+            <i class="fas fa-at"></i>
+        </a>
+    </div>
+</article>

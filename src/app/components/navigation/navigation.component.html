@@ -1,0 +1,32 @@
+<nav [className]="fixedMenu ? 'navbarFixe' : 'navbarContainer '">
+    <div class="col-lg-9 col-md-10 col-sm-11 col-xs-12 navbar">
+        <h1>Graphibox</h1>
+        <div class="menu">
+            <ul>
+                <li routerLinkActive #rla="routerLinkActive"
+                [ngClass]="{ active: rla.isActive && !fixedMenu }">
+                    <a routerLink="home" fragment="home"> Accueil</a>
+                </li>
+                <li routerLinkActive #rla="routerLinkActive" 
+                [ngClass]="{ active: rla.isActive && fixedMenu }">
+                    <a routerLink="home" fragment="entreprise">Entreprise</a>
+                </li>
+
+                <li routerLinkActive="active">
+                    <a routerLink="news">Actualité</a>
+                </li>
+
+                <li routerLinkActive="active">
+                    <a routerLink="contact">Contact</a>
+                </li>
+
+                <li *ngIf="isConnected" routerLinkActive="active">
+                    <a routerLink="control">Panel</a>
+                </li>
+                <li *ngIf="isConnected" class="disconectBtn">
+                    <a (click)="onDisconnect()">Se déconnecter</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

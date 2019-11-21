@@ -1,0 +1,31 @@
+<div *ngIf="deleteBox" class="successBox">
+    <p>Le message a été supprimé</p>
+</div>
+
+<h2>Messages reçus</h2>
+
+<table>
+    <tr class="titles">
+        <th class="col-lg-2 col-md-2">Contact</th>
+        <th class="col-lg-2 col-md-2">Sujet</th>
+        <th class="col-lg-2 col-md-2">Date de réception</th>
+        <th class=" col-lg-5 col-md-5 msgTD">Message</th>
+        <th class=" col-lg-1 col-md-1 "></th>
+    </tr>
+    <tr *ngFor="let message of messages; let odd = odd" [class.odd]="odd">
+        <td class="col-lg-2 col-md-2">
+            <div class="contactInfos">
+                <p>{{ message.nameContact }}</p>
+                <p>{{ message.mailContact }}</p>
+                <p>{{ message.telContact }}</p>
+            </div>
+        </td>
+        <td class="col-lg-2 col-md-2">{{ message.subjectContact }}</td>
+        <td class="col-lg-2 col-md-2">{{ message.date_contact }}</td>
+        <td class=" col-lg-5 col-md-5 msgTD">{{ message.messageContact }}</td>
+        <td class=" col-lg-1 col-md-1 tdButton">
+            <a (click)="onAnswer(message.mailContact)" class="answer">Répondre</a>
+            <a (click)="onDelete(message.id)" class="delete">Supprimer</a>
+        </td>
+    </tr>
+</table>

@@ -1,0 +1,16 @@
+<h2>Liste des contacts</h2>
+
+<table class="col-lg-12">
+    <tr class="titles">
+        <th>Contact</th>
+        <th>Télephone</th>
+        <th>Email</th>
+        <th>Date</th>
+    </tr>
+    <tr *ngFor="let message of messages; let odd = odd" [class.odd]="odd">
+        <td>{{ message.nameContact }}</td>
+        <td>{{ message.telContact }}</td>
+        <td>{{ message.mailContact }}</td>
+        <td>{{ message.date_contact }}</td>
+    </tr>
+</table>

@@ -1,0 +1,157 @@
+<app-decoration title="Notre Savoir-Faire"></app-decoration>
+
+<article class="col-lg-4 col-md-4 col-sm-4">
+  <a (click)="showInModal(0)">
+    <img src="./assets/img/entreprises/conception.jpg" alt="conception" />
+    <h3>Conception</h3>
+    <p>
+        La conception d’un projet de communication passe d’abord par plusieurs
+        étapes essentielles : <br />
+        - La prise de rendez-vous afin de vous rencontrer et découvrir vos attentes,
+        votre ...
+      </p>
+  </a>
+
+</article>
+
+<article class="col-lg-4 col-md-4 col-sm-4">
+  <a (click)="showInModal(1)">
+    <img src="./assets/img/entreprises/developpement.jpg" alt="developpement" />
+    <h3>Développement</h3>
+    <p>
+        Nous développons vos projets de communication avec vous. Durant la phase de
+        développement, nous mettons à votre disposition les moyens de suivre
+        l'évolution de la construction ...
+      </p>
+  </a>
+</article>
+
+<article class="col-lg-4 col-md-4 col-sm-4">
+  <a (click)="showInModal(2)">
+    <img src="./assets/img/entreprises/hebergement.jpg" alt="hebergement" />
+    <h3>Hébergement</h3>
+    <p>
+        L'hébergement de votre projet, une étape à ne pas négliger ! Nous mettons au
+        service de vos besoins les meilleures solutions d'hébergement sécurisé ;
+        Serveurs dédiés, virtualisation, cloud computing,...
+      </p>
+  </a>
+
+</article>
+
+<!-- modal -->
+<div *ngIf="modals[0]" class="modalBlock">
+  <a (click)="closeModal(0)" class="closeBtn">X</a>
+
+  <div class="imgDiv">
+    <img src="./assets/img/entreprises/conception.jpg" alt="conception" />
+  </div>
+  <article class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+    <app-decoration title="Conception"></app-decoration>
+
+    <div class="contentModal">
+      <p>
+        <b
+          >La conception d’un projet de communication passe d’abord par
+          plusieurs étapes essentielles :
+        </b><br>
+        - La prise de rendez-vous afin de vous rencontrer et découvrir vos
+        attentes, votre objectif ; <br />
+        - Vous conseiller sur votre projet de communication ; <br />
+        Que se soit sur le choix d’une nouvelle identité visuelle adaptée ou
+        bien d’un relookage d’un projet existant,de l’ergonomie de votre futur
+        site web, ou encore, de vous informer sur les différentes contraintes
+        techniques relatives à votre projet... <br />
+        - Vous guider vers les outils les plus adaptés afin de servir au mieux
+        votre projet sur différents supports de visibilité ;<br />
+        - Etablir un planning et une stratégie la plus efficace pour optimiser
+        et rentabiliser votre outil de communication, tout en respectant votre
+        budget ; <br />
+        - Préparer le suivi et la maintenance de votre projet afin de vous
+        permettre, une fois en ligne, de mettre facilement à jour le contenu de
+        votre site Internet : textes, photos, vidéos... <br />
+        Pour toutes ses étapes, nous vous accompagnons et restons à votre écoute
+        afin de réaliser pour vous un site sur mesure et adapté à vos besoins.
+      </p>
+    </div>
+    <div class="btnsModal">
+      <a (click)="showInModal(2)">Hébergement</a>
+      <a (click)="showInModal(1)">Développement</a>
+    </div>
+  </article>
+</div>
+
+<div *ngIf="modals[1]" class="modalBlock">
+  <a (click)="closeModal(1)" class="closeBtn">X</a>
+  <div class="imgDiv">
+    <img src="./assets/img/entreprises/developpement.jpg" alt="developpement" />
+  </div>
+  <article class="col-lg-8 col-md-8 col-sm-8 col-xs-12" >
+    <app-decoration title="Développement"></app-decoration>
+
+    <div class="contentModal">
+      <p>
+        <b>Nous développons vos projets de communication avec vous.</b> <br>
+        Durant la phase de développement, nous mettons à votre disposition les
+        moyens de suivre l'évolution de la construction de votre projet en temps
+        réel car la communication entre vous et nous est essentielle avant toute
+        publication finale. Que vous soyez une PME, PMI, un auto-entreprenneur,
+        un artisan, un organisme de tourisme, un commerçant, etc..., nous
+        concevons vos projets pour tous types de secteurs d'activités (services,
+        tourisme, vins & spriritueux, Agro-alimentaire, e-commerce,
+        collectivités, bâtiment, ...).
+        <br />
+        Les nouvelles technologies évoluent vite. Nous nous tenons à jour de
+        cette évolution afin de répondre à tous vos besoins (CMS, sites ou
+        applications pour mobiles & smartphones, responsive design, contenus
+        dynamiques,...). Pour les e-commerce, nous prennons en charge le
+        développement des modules de paiement sécurisés (Paybox, Systempay,
+        PayPal, Kwixo,.... ). De même pour les modules de livraison en relais
+        colis (TNT, Chronorelais,...). Nous développons également pour vous les
+        outils qui vous permettent de gérer de manière autonome vos contenus
+        dynamiques en temps réel (Backoffice, gestion des données,
+        imports/exports web-services,...).
+      </p>
+    </div>
+    <div class="btnsModal">
+      <a (click)="showInModal(0)">Conception</a>
+      <a (click)="showInModal(2)">Hébergement</a>
+    </div>
+  </article>
+</div>
+
+<div *ngIf="modals[2]" class="modalBlock">
+  <a (click)="closeModal(2)" class="closeBtn">X</a>
+
+  <div class="imgDiv" >
+    <img src="./assets/img/entreprises/hebergement.jpg" alt="hebergement" />
+  </div>
+  <article class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+    <app-decoration title="Hébergement"></app-decoration>
+
+    <div class="contentModal">
+      <p>
+        <b> L'hébergement de votre projet, une étape à ne pas négliger ! </b> <br>
+        Nous mettons au service de vos besoins les meilleures solutions
+        d'hébergement sécurisé ; Serveurs dédiés, virtualisation, cloud
+        computing,... notre structure d'hébergement répondra à toutes vos
+        attentes. Notre prestation d'hébergement prend en compte technologie,
+        sécurité, bande passante, stockage, tolérance de panne..., tous les
+        critères essentiels afin de vous garantir une qualité de service 24h/24h
+        pour votre projet Internet. Nous pouvons prendre en charge pour vous :
+        <br />
+        - La réservation et la gestion de votre nom de domaine ; <br />
+        - L'hébergement et la sauvegarde des fichiers de données de votre projet
+        Internet ; <br />
+        - La mise en ligne et la maintenance de votre projet Internet sur le
+        World Wide Web ;<br />
+        - La gestion et la maintenance de votre messagerie professionnelle
+        associée à votre nom de domaine (boîtes e-mails personnalisées) ;
+      </p>
+    </div>
+    <div class="btnsModal">
+      <a (click)="showInModal(1)"> Développement</a>
+      <a (click)="showInModal(0)">Conception</a>
+    </div>
+  </article>
+</div>

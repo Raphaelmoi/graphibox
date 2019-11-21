@@ -1,0 +1,32 @@
+.form-group{
+    display: flex;
+    flex-direction: column;
+  padding: 0;
+  }
+  label{
+    margin-left: 10px;
+  }
+  .form-group input{
+    margin: 10px;
+    height: 30px;
+    padding-left: 10px;
+  }
+  textarea{
+    margin: 10px;
+    height: 200px;
+    padding: 10px;
+  }
+  .btnSend{
+    padding: 8px;
+    margin-left: 10px;
+    margin-bottom: 15px;
+  }
+  .btnSend:hover{
+    background-color: #7da73e;
+    border: none;
+    cursor: pointer;
+  
+  }
+  input.ng-dirty.ng-invalid {
+    border: 1px red solid;
+  }

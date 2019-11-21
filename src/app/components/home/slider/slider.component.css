@@ -1,0 +1,10 @@
+.home {
+  background-color: #2e353f;
+  height: 92vh;
+  overflow: hidden;
+}
+@media all and (max-width: 768px) {
+  .home {
+    height: 40vh;
+  }
+}

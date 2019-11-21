@@ -1,0 +1,17 @@
+<section>
+    <app-decoration 
+        title="Actualités" 
+        legend="Qu'est ce que le responsive design? Pourquoi optimiser la taille de vos images? 
+        Vous trouverez ici toutes nos actualités">
+    </app-decoration>
+
+    <section class="col-lg-12 newsContainer">
+        <app-news-item 
+            *ngFor="let article of articles" 
+            [image]="article.picture01A"
+            [title]="article.titleA"
+            [legend]="article.categoryNameA"
+            [id]="article.idA">
+        </app-news-item>
+    </section>
+</section>

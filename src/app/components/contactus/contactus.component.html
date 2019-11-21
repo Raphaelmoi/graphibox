@@ -1,0 +1,93 @@
+<div *ngIf="mailSend" class="successBox">
+    <p>Votre email a bien été envoyé</p>
+</div>
+
+<section class="container.full contactSection">
+    <section class="col-lg-4 col-md-4 col-sm-4 infoText">
+        <!-- empty space on purpose -->
+        <div class="col-lg-3 col-md-2 col-sm-2"></div>
+        <div class="col-lg-9 col-md-10 col-sm-10">
+            <h4>Informations</h4>
+            <article class="contactArticle">
+                <div>
+                    <i class="fas fa-map-marker-alt fa-2x"></i>
+                    <div>
+                        <h6>Adresse</h6>
+                        <p>9-A Rue de la Tuilerie, 32200 Gimont</p>
+                    </div>
+                </div>
+
+                <div>
+                    <i class="far fa-envelope fa-2x"></i>
+                    <div>
+                        <h6>Email</h6>
+                        <p>contact@graphibox.net</p>
+                    </div>
+                </div>
+
+                <div>
+                    <i class="fas fa-phone fa-2x"></i>
+                    <div>
+                        <h6>Téléphone</h6>
+                        <p>+33 (0)5 62 67 88 20</p>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="linksOut">
+                        <h6>Assistance</h6>
+                        <a href="https://faq.graphibox.fr">Questions fréquentes</a>
+                        <br />
+                        <a href="https://support.graphibox.fr/">Support client</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section class="col-lg-8  mapAndForm">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11552.290740201573!2d0.8734826!3d43.6258461!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8db0d0e87dd6ee3b!2sGraphibox!5e0!3m2!1sfr!2sfr!4v1573737764422!5m2!1sfr!2sfr"
+            frameborder="0" allowfullscreen=""></iframe>
+
+        <form class="col-lg-10" (ngSubmit)="onSubmit(f)" #f="ngForm">
+            <h3>Contactez- nous</h3>
+
+            <div class="col-lg-12 form-group">
+                <label for="name">
+                    Votre nom
+                </label>
+                <input type="text" id="name" name="name" minlength="4" ngModel required />
+            </div>
+            <div class="col-lg-12 form-group">
+                <label for="mail">
+                    Votre Mail
+                </label>
+                <input type="email" id="mail" name="mail" ngModel email required />
+            </div>
+            <div class="col-lg-12 form-group">
+                <label for="tel">
+                    Votre Téléphone
+                </label>
+                <input type="tel" id="tel" name="tel" ngModel
+                    pattern="^(?:(?:\+|00)33[\s.-]{0,3}(?:\(0\)[\s.-]{0,3})?|0)[1-9](?:(?:[\s.-]?\d{2}){4}|\d{2}(?:[\s.-]?\d{3}){2})$"
+                    required />
+            </div>
+            <div class="col-lg-12 form-group">
+                <label for="subject">
+                    Sujet
+                </label>
+                <input type="text" id="subject" name="subject" minlength="4" ngModel required />
+            </div>
+            <div class="col-lg-12 form-group">
+                <label for="message">
+                    Votre Message
+                </label>
+                <textarea id="message" name="message" ngModel required></textarea>
+            </div>
+            <button class="btnSend " type="submit" [disabled]="f.invalid">
+                Envoyer
+            </button>
+        </form>
+    </section>
+</section>

@@ -1,0 +1,19 @@
+<section class="col-lg-12">
+	<nav>
+		<li [ngClass]="defineClass('message')">
+			<a (click)="onNextView('message')"> Messages</a>
+		</li>
+		<li [ngClass]="defineClass('contact')">
+			<a (click)="onNextView('contact')">Contacts</a>
+		</li>
+
+		<li [ngClass]="defineClass('mail')">
+			<a (click)="onNextView('mail')">Mail</a>
+		</li>
+	</nav>
+	<section class="col-lg-12 viewContainer">
+		<app-message-lsit *ngIf="view == 'message'"></app-message-lsit>
+		<app-contact-list *ngIf="view == 'contact'"></app-contact-list>
+		<app-send-mail *ngIf="view == 'mail'"></app-send-mail>
+	</section>
+</section>

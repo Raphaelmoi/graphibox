@@ -1,0 +1,16 @@
+table{
+    width: 100%;
+    margin: 8px;
+    border-spacing: 0;
+}
+td {
+    text-align: center;
+    padding: 10px;
+}
+.odd{
+    background: #EEE;
+}
+.titles{
+    background: #eee;
+    padding: 10px;
+}

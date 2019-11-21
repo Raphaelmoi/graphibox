@@ -1,0 +1,44 @@
+table{
+    width: 100%;
+    margin: 8px;
+    border-spacing: 0;
+}
+td {
+    padding: 10px;
+}
+.contactInfos p {
+    margin: 4px;
+}
+.odd{
+    background: #EEE;
+}
+.titles{
+    background: #eee;
+    padding: 10px;
+    text-align: left;
+}
+.tdButton {
+    display: flex;
+    flex-direction: column;
+}
+.tdButton a {
+    padding: 4px;
+    margin: 4px;
+    text-align: center;
+    border-radius: 4px;
+    color: white;
+}
+.answer {
+    background-color: #7da73e;
+}
+.delete {
+    background-color: crimson;
+
+}
+
+@media all and (max-width: 768px) {
+
+    table {
+        margin: 8px 0;
+    }
+}

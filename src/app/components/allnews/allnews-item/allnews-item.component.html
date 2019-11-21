@@ -1,0 +1,15 @@
+<article class="col-lg-6 col-md-6 col-sm-6 col-xs-6 news">
+    
+    <img class="imgNews" src="{{ webService.imageUrl(id, image) }}" alt="" />
+    <div class="col-lg-6 itemContent">
+
+        <h4>{{ title }}</h4>
+        
+        <legend>{{ convertIsoDate(datePublication) | date: "longDate" }}</legend>
+        
+        <div class="htmlArticle" [innerHtml]="getText(article)"></div>
+        
+        <a class="btnReadMore" (click)="onViewArticle(id)"> Lire l'article</a>
+    
+    </div>
+</article>

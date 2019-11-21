@@ -1,0 +1,31 @@
+section {
+  margin: 10px 0 30px 0;
+}
+h2 {
+  text-align: center;
+  text-transform: uppercase;
+}
+.legendText {
+  text-align: center;
+  color: #333;
+  font-style: italic;
+  margin: 20px;
+}
+.fioriture {
+  display: flex;
+  justify-content: center;
+}
+.lineDown {
+  width: 12px;
+  height: 2px;
+  background: black;
+  transform: rotate(45deg);
+  margin: -2px;
+}
+.lineUp {
+  width: 12px;
+  height: 2px;
+  background: black;
+  transform: rotate(-45deg);
+  margin: -2px;
+}

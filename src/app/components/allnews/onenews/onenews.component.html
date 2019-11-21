@@ -1,0 +1,22 @@
+<div class="container.full" *ngIf="article[0] !== undefined">
+  <img src="{{ webService.imageUrl(article[0].idA, article[0].picture01A) }}" alt="" />
+</div>
+
+<section class="col-lg-12" *ngIf="article[0] !== undefined">
+  <a class="returnBtn" [routerLink]="['/news']"> Voir les autres articles</a>
+
+  <app-decoration
+    [title]="article[0].titleA"
+    [legend]="article[0].titleSubA"
+  ></app-decoration>
+
+  <div class="col-lg-9 " [innerHtml]="article[0].describeA"></div>
+  
+  <div class="col-lg-9 col-md-9 col-sm-10 col-xs-11 btnsNavDiv"
+    *ngIf="webService.articles[0] !== undefined" >
+    <a (click)="onNextArticle(1)"> Article Précedent</a>
+    <a (click)="onNextArticle(-1)"> Article Suivant </a>
+  </div>
+</section>
+
+<app-footer></app-footer>

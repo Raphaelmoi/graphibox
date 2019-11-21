@@ -1,0 +1,115 @@
+.contactSection {
+  height: 92vh;
+}
+.infoText {
+  background-color: #2e353f;
+  height: 100%;
+  color: #eee;
+  display: flex;
+  padding-top: 20px;
+}
+h4 {
+  text-transform: uppercase;
+  align-self: flex-start;
+  margin: 10px;
+  margin-top: 20px;
+}
+h6 {
+  margin: 0;
+  font-size: 14px;
+}
+.contactArticle {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.contactArticle > div {
+  display: flex;
+  align-items: center;
+}
+i {
+  margin: 20px;
+}
+.mapAndForm {
+  padding: 0;
+  height: 100%;
+  overflow-y: scroll;
+}
+iframe {
+  margin: 0;
+  width: 100%;
+  height: 40%;
+  border: 0;
+}
+form {
+  margin: 0 40px 0 0;
+}
+form h3 {
+  font-variant: small-caps;
+  margin: 8px;
+}
+legend {
+  color: #333;
+  margin: 0 0 20px 10px;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+label {
+  margin-left: 10px;
+}
+.form-group input {
+  margin: 10px;
+  height: 30px;
+  padding-left: 10px;
+}
+textarea {
+  margin: 10px;
+  height: 200px;
+  padding: 10px;
+}
+.btnSend {
+  padding: 8px;
+  margin-left: 10px;
+}
+.btnSend:hover {
+  background-color: #7da73e;
+  border: none;
+  cursor: pointer;
+}
+
+.linksOut h6 {
+  font-size: larger;
+  margin: 10px 0;
+}
+.linksOut a {
+  color: white;
+}
+.linksOut a:hover {
+  color: #7da73e;
+}
+input.ng-dirty.ng-invalid {
+  border: 1px red solid;
+}
+
+@media all and (max-width: 768px) {
+  .contactSection {
+    height: auto;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .infoText {
+    /* display: none; */
+  }
+
+  .mapAndForm {
+    overflow-y: auto;
+    padding-bottom: 20px;
+  }
+  i {
+    margin: 10px;
+  }
+}
