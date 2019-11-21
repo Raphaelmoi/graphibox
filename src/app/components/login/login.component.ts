@@ -48,8 +48,7 @@ export class LoginComponent implements OnInit {
                 response => {
                     window.sessionStorage.setItem('connect', JSON.stringify(response));
                     this.router.navigate(['control', 'message']);
-                },
-                // response => console.log(response)
+                }
             );
     }
 }

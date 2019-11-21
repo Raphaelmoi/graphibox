@@ -7,6 +7,7 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { registerLocaleData } from '@angular/common';
 import localeFr from '@angular/common/locales/fr';
+import { FormsModule } from '@angular/forms';
 
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { HomeComponent } from './components/home/home.component';
@@ -22,16 +23,14 @@ import { DecorationComponent } from './components/decoration/decoration.componen
 import { AllnewsComponent } from './components/allnews/allnews.component';
 import { AllnewsItemComponent } from './components/allnews/allnews-item/allnews-item.component';
 import { OnenewsComponent } from './components/allnews/onenews/onenews.component';
-
-import { WebServiceService } from './services/web-service.service';
-import { FormsModule } from '@angular/forms';
-import { LoginComponent } from './components/login/login.component';
-import { AuthGuardService } from './services/auth-guard.service';
 import { BackendComponent } from './components/backend/backend.component';
 import { ContactListComponent } from './components/backend/contact-list/contact-list.component';
 import { MessageLsitComponent } from './components/backend/message-lsit/message-lsit.component';
 import { SendMailComponent } from './components/backend/send-mail/send-mail.component';
-import { DatabaseService } from './services/database.service';
+import { LoginComponent } from './components/login/login.component';
+
+import { WebServiceService } from './services/web-service.service';
+import { AuthGuardService } from './services/auth-guard.service';
 
 registerLocaleData(localeFr, 'fr');
 
@@ -44,7 +43,6 @@ const appRoutes: Routes = [
   { path: 'control', canActivate: [AuthGuardService], component: BackendComponent },
   { path: 'control/:view', canActivate: [AuthGuardService], component: BackendComponent },
   { path: 'control/:view/:email', canActivate: [AuthGuardService], component: BackendComponent },
-  // { path: 'control/messages',  canActivate: [AuthGuardService], component: MessageLsitComponent },
   { path: '',
     redirectTo: 'home',
     pathMatch: 'full'
@@ -83,7 +81,7 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes, {     onSameUrlNavigation: 'reload', anchorScrolling: 'enabled'}),
     CommonModule,
   ],
-  providers: [ WebServiceService , AuthGuardService, DatabaseService, {provide: LOCALE_ID, useValue: "fr" }],
+  providers: [ WebServiceService , AuthGuardService, {provide: LOCALE_ID, useValue: "fr" }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

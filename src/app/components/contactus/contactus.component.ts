@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms'
 import { HttpClient } from "@angular/common/http";
-import { DatabaseService } from 'src/app/services/database.service';
-// import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
     selector: 'app-contactus',
@@ -21,7 +20,8 @@ export class ContactusComponent implements OnInit {
     http: HttpClient;
     mailSend: boolean = false;
 
-    constructor( private databaseService: DatabaseService) {
+    constructor( http: HttpClient ) {
+        this.http = http;
     }
 
     ngOnInit() {
@@ -47,12 +47,12 @@ export class ContactusComponent implements OnInit {
             subject: this.subject,
             message: this.message
         };
-        console.log(postVars)
+        // console.log(postVars)
         // Call the php file to send on root for sending mail
         this.http.post(this.endpoint, postVars)
             .subscribe(
                 response => {
-                    // console.log(response);
+                    console.log(response);
                     this.mailSend = true;
                     form.reset();
                 }
