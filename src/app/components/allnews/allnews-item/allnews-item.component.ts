@@ -24,11 +24,11 @@ export class AllnewsItemComponent implements OnInit {
 
     ngOnInit() {
     }
-
+    //convert iso date format to an angular readable date
     convertIsoDate(datePublication) {
         return new Date(datePublication);
     }
-
+    //formate article by replacing all the html balises with a div balise
     getText() {
         let value;
         value = htmlToPlaintext(this.article);

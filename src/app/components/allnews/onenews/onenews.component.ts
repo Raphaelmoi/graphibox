@@ -26,8 +26,4 @@ export class OnenewsComponent implements OnInit {
             this.router.navigate(['news', 'view', nextId]);
         });
     }
-
-    ngOnDestroy() {
-    }
-
 }
