@@ -6,7 +6,7 @@ import { NgxXml2jsonService } from 'ngx-xml2json';
     providedIn: 'root'
 })
 export class WebServiceService {
-    apikey: string = "q7XQt4AYXhmLy9E3nb939qP24iSVa5f8";
+    apikey: string = "APIKEY";
     urlListArticle: string = "https://ws-gbbu02.graphibox.eu/WebService.asmx/GetArticles?pKey="
     urlSingleArticle: string = "https://ws-gbbu02.graphibox.eu/WebService.asmx/GetArticle?pKey="
     urlImage: string = 'https://cdn-gbbu02.graphibox.eu/pub/1/medias/articles/';
